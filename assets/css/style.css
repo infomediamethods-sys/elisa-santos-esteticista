@@ -214,20 +214,14 @@ h2 em { color: var(--ouro-texto); }
 .heroi__secundario .icone { width: var(--icone-linha); height: var(--icone-linha); }
 .heroi__foto { aspect-ratio: auto; width: 100%; height: clamp(200px, 30svh, 260px); }
 .heroi__foto img { object-position: 60% 45%; }
-.heroi__rolar { display: none; }
 @media (max-width: 359px) { .heroi__titulo { font-size: 2.5rem; } }
 @media (min-width: 600px) and (max-width: 899px) { .heroi__foto { height: 300px; } }
 @media (min-width: 900px) {
   .heroi { padding-block: calc(var(--header-h) + var(--space-9)) var(--space-7); }
-  .heroi__grade { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-8); align-items: end; }
+  .heroi__grade { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-8); align-items: center; }
   .heroi__titulo { font-size: clamp(3.5rem, 7.2vw, 6.5rem); }
   .heroi__foto { height: auto; aspect-ratio: 4 / 5; max-width: 480px; justify-self: end; }
   .heroi__foto img { object-position: 60% 30%; }
-  .heroi__rolar {
-    display: flex; align-items: center; gap: var(--space-3); grid-column: 1;
-    font-family: var(--fonte-ui); font-size: 0.6875rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--creme-2);
-  }
-  .heroi__rolar::after { content: ""; width: 1px; height: 32px; background: var(--ouro); opacity: .7; }
 }
 
 /* Barra de confiança (pé do herói) */

@@ -212,7 +212,7 @@ h2 em { color: var(--ouro-texto); }
 }
 .heroi__secundario .icone { width: var(--icone-linha); height: var(--icone-linha); }
 .heroi__foto { aspect-ratio: auto; width: 100%; height: clamp(200px, 30svh, 260px); }
-.heroi__foto img { object-position: 70% 25%; }
+.heroi__foto img { object-position: 60% 45%; }
 .heroi__rolar { display: none; }
 @media (max-width: 359px) { .heroi__titulo { font-size: 2.75rem; } }
 @media (min-width: 600px) and (max-width: 899px) { .heroi__foto { height: 300px; } }

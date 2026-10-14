@@ -198,8 +198,8 @@ h2 em { color: var(--ouro-texto); }
 .heroi__titulo {
   color: var(--creme); font-size: 2.75rem; line-height: 0.96; letter-spacing: -0.025em;
 }
-/* "Aqui o tempo é seu." pode quebrar em tela estreita; "é seu" fica junto (&nbsp;). */
-.heroi__titulo em { color: var(--ouro); white-space: normal; }
+/* "Aqui o tempo é seu." sempre na 2ª linha; quebra só abaixo de 360 px ("é seu" fica junto, &nbsp;). */
+.heroi__titulo em { display: block; color: var(--ouro); white-space: normal; }
 .heroi__texto { display: grid; gap: var(--space-4); }
 .heroi__apoio { color: var(--creme-2); max-width: 30em; }
 .heroi__acoes { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4) var(--space-5); margin-block-start: var(--space-2); }

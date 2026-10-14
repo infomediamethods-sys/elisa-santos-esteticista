@@ -345,8 +345,8 @@ h2 em { color: var(--ouro-texto); }
   border: 1px solid var(--ouro); opacity: .22; transform: translateY(-50%); pointer-events: none;
 }
 .gestacao .container { position: relative; }
-.pratica .split__foto { aspect-ratio: 15 / 16; }
-.pratica .split__foto img { object-position: 60% 40%; }
+.pratica .split__foto { aspect-ratio: 4 / 5; }
+.pratica .split__foto img { object-position: 50% 30%; }
 .pratica .split__legenda { left: auto; right: var(--space-5); }
 @media (max-width: 599px) { .pratica .split__legenda { top: var(--space-5); bottom: auto; } }
 .gestacao .split__foto { max-width: 560px; aspect-ratio: 4 / 5; }

@@ -196,9 +196,10 @@ h2 em { color: var(--ouro-texto); }
 }
 .heroi__grade { display: grid; gap: var(--space-6); }
 .heroi__titulo {
-  color: var(--creme); font-size: 3rem; line-height: 0.96; letter-spacing: -0.025em;
+  color: var(--creme); font-size: 2.75rem; line-height: 0.96; letter-spacing: -0.025em;
 }
-.heroi__titulo em { color: var(--ouro); }
+/* "Aqui o tempo é seu." pode quebrar em tela estreita; "é seu" fica junto (&nbsp;). */
+.heroi__titulo em { color: var(--ouro); white-space: normal; }
 .heroi__texto { display: grid; gap: var(--space-4); }
 .heroi__apoio { color: var(--creme-2); max-width: 30em; }
 .heroi__acoes { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4) var(--space-5); margin-block-start: var(--space-2); }
@@ -214,7 +215,7 @@ h2 em { color: var(--ouro-texto); }
 .heroi__foto { aspect-ratio: auto; width: 100%; height: clamp(200px, 30svh, 260px); }
 .heroi__foto img { object-position: 60% 45%; }
 .heroi__rolar { display: none; }
-@media (max-width: 359px) { .heroi__titulo { font-size: 2.75rem; } }
+@media (max-width: 359px) { .heroi__titulo { font-size: 2.5rem; } }
 @media (min-width: 600px) and (max-width: 899px) { .heroi__foto { height: 300px; } }
 @media (min-width: 900px) {
   .heroi { padding-block: calc(var(--header-h) + var(--space-9)) var(--space-7); }

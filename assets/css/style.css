@@ -232,9 +232,9 @@ h2 em { color: var(--ouro-texto); }
 .confianca li { display: grid; gap: var(--space-1); align-content: start; padding: var(--space-4) var(--space-3) var(--space-4) 0; border-bottom: 1px solid rgba(202, 155, 92, .2); }
 .confianca__rotulo { font-family: var(--fonte-ui); font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--creme-2); }
 .confianca__dado { font-family: var(--fonte-ui); font-size: 1rem; line-height: 1.4; color: var(--creme); }
-@media (max-width: 399px) { .confianca { grid-template-columns: 1fr; } }
+@media (max-width: 599px) { .confianca { grid-template-columns: 1fr; } }
 @media (min-width: 900px) {
-  .confianca { grid-template-columns: repeat(4, 1fr); }
+  .confianca { grid-template-columns: repeat(2, 1fr); }
   .confianca li { padding-block: var(--space-5); border-bottom: 0; }
 }
 

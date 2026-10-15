@@ -439,7 +439,7 @@ ul.endereco__dados[role="list"] { padding: var(--space-5); }
   body:has(.whatsapp-fixo) { padding-bottom: 0; }
   .rodape { padding-block-end: calc(var(--space-9) + var(--space-4)); }
 }
-@media (min-width: 900px) { .rodape__grade { grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: var(--space-7); } }
+@media (min-width: 900px) { .rodape__grade { grid-template-columns: 1.4fr 1fr 1fr; gap: var(--space-7); } }
 
 /* ---------- Barra fixa do celular (WhatsApp + Ligar) ---------- */
 .whatsapp-fixo { gap: var(--space-2); }

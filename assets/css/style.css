@@ -90,13 +90,22 @@ h2 em { color: var(--ouro-texto); }
 .link-seta .icone { width: var(--icone-linha); height: var(--icone-linha); transition: transform .15s var(--curva); }
 .link-seta:hover .icone, .link-seta:focus-visible .icone { transform: translateX(4px); }
 
-/* ---------- Monograma ---------- */
+/* ---------- Monograma (arco duplo + E e S entrelaçados; revisão do Armin 15/10/2026) ---------- */
 .mono {
-  display: inline-grid; place-items: center; flex-shrink: 0;
-  width: 54px; height: 54px; border-radius: 50%; border: 1px solid var(--ouro);
-  font-family: var(--fonte-titulo); font-style: italic; font-weight: 300; font-size: 1.375rem; letter-spacing: -0.04em;
+  --mono-w: 40px; --mono-h: 54px;
+  position: relative; display: inline-block; flex-shrink: 0;
+  width: var(--mono-w); height: var(--mono-h);
+  border: 1px solid var(--ouro); border-radius: 999px 999px 3px 3px;
+  font-family: var(--fonte-titulo); font-style: italic; font-weight: 300; font-size: calc(var(--mono-h) * .42); line-height: 1;
   color: var(--ouro); transition: width .15s var(--curva), height .15s var(--curva);
 }
+.mono::before {
+  content: ""; position: absolute; inset: 3px; border: 1px solid currentColor; opacity: .4;
+  border-radius: 999px 999px 1px 1px;
+}
+.mono__e, .mono__s { position: absolute; left: 50%; top: 50%; }
+.mono__e { transform: translate(-72%, -66%); }
+.mono__s { transform: translate(-22%, -24%); }
 
 /* ---------- Cabeçalho ---------- */
 .cabecalho {
@@ -113,10 +122,13 @@ h2 em { color: var(--ouro-texto); }
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .cabecalho[data-rolado], .pagina-clara .cabecalho { background: rgba(251, 248, 243, .96); }
 }
-.cabecalho[data-rolado] .mono, .pagina-clara .cabecalho .mono { width: 40px; height: 40px; color: var(--ouro-texto); border-color: var(--ouro-texto); font-size: 1.125rem; }
+.cabecalho[data-rolado] .mono, .pagina-clara .cabecalho .mono { --mono-w: 32px; --mono-h: 44px; color: var(--ouro-texto); border-color: var(--ouro-texto); }
+.cabecalho[data-rolado] .marca__nome-sub, .pagina-clara .cabecalho .marca__nome-sub { color: var(--ouro-texto); }
 .cabecalho__linha { display: flex; align-items: center; gap: var(--space-4); }
 .marca { display: flex; align-items: center; gap: var(--space-3); flex-shrink: 0; text-decoration: none; min-width: 0; }
-.marca__nome { font-family: var(--fonte-titulo); font-weight: 400; font-size: 1.125rem; line-height: 1.15; }
+.marca__nome { display: grid; gap: 5px; }
+.marca__nome-principal { font-family: var(--fonte-titulo); font-weight: 400; font-size: 1.25rem; line-height: 1; letter-spacing: -0.01em; }
+.marca__nome-sub { font-family: var(--fonte-ui); font-size: 0.6875rem; line-height: 1; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ouro); }
 .cabecalho__nav { display: none; }
 .cabecalho__cta { display: none; }
 .cabecalho__menu {
@@ -124,7 +136,7 @@ h2 em { color: var(--ouro-texto); }
   width: var(--toque-min); height: var(--toque-min); border-radius: 50%;
   border: 1px solid currentColor; background: transparent; color: inherit;
 }
-@media (max-width: 399px) { .marca { flex-shrink: 1; } .marca__nome { font-size: 1rem; } }
+@media (max-width: 399px) { .marca { flex-shrink: 1; } .marca__nome-principal { font-size: 1.125rem; } .marca__nome-sub { letter-spacing: 0.22em; } }
 @media (min-width: 900px) {
   .cabecalho__menu { display: none; }
   .cabecalho__nav { display: block; margin-inline-start: auto; }
@@ -141,7 +153,7 @@ h2 em { color: var(--ouro-texto); }
   .cabecalho__cta { display: inline-flex; }
 }
 @media (min-width: 900px) and (max-width: 1099px) {
-  .marca__nome { display: none; }
+  .cabecalho .marca__nome { display: none; }
   .cabecalho__nav ul { gap: var(--space-4); }
 }
 
@@ -422,6 +434,8 @@ ul.endereco__dados[role="list"] { padding: var(--space-5); }
 .rodape__grade { display: grid; gap: var(--space-6); }
 .rodape__marca { display: grid; gap: var(--space-4); justify-items: start; align-content: start; }
 .rodape__marca .mono { color: var(--ouro-texto); border-color: var(--ouro-texto); }
+.marca--rodape { color: var(--tinta); }
+.marca--rodape .marca__nome-sub { color: var(--ouro-texto); }
 .rodape__frase { font-family: var(--fonte-titulo); font-style: italic; font-size: 1.25rem; color: var(--tinta); }
 .rodape h2 { font-family: var(--fonte-ui); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; color: var(--ouro-texto); margin-block-end: var(--space-3); }
 .rodape address { font-style: normal; line-height: 1.6; padding-block-start: calc((var(--toque-min) - 1.6em) / 2); }

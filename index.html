@@ -18,10 +18,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&display=swap" rel="stylesheet">
+<link rel="preload" as="image" media="(max-width: 899px)" imagesrcset="assets/img/heroi-roupao-celular-480.webp 480w, assets/img/heroi-roupao-celular-960.webp 960w" imagesizes="100vw">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/style.css">
-<link rel="preload" as="image" href="assets/img/heroi-roupao-celular.webp" media="(max-width: 899px)">
-<link rel="preload" as="image" href="assets/img/heroi-roupao.webp" media="(min-width: 900px)">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -110,11 +109,10 @@
       </div>
       <figure class="heroi__foto moldura heroi__item" style="--i:2">
         <picture>
-          <source media="(max-width: 899px)" srcset="assets/img/heroi-roupao-celular.webp" type="image/webp">
-          <source media="(max-width: 899px)" srcset="assets/img/heroi-roupao-celular.jpg">
-          <source srcset="assets/img/heroi-roupao.webp" type="image/webp">
-          <img src="assets/img/heroi-roupao.jpg" width="1600" height="2000" alt="Roupão branco dobrado e toalha enrolada sobre um banco de madeira, com a luz da tarde atravessando a cortina" fetchpriority="high">
-        </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/heroi-roupao-celular-480.webp 480w, assets/img/heroi-roupao-celular-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/heroi-roupao-960.webp 960w, assets/img/heroi-roupao-1600.webp 1600w" sizes="100vw">
+  <img src="assets/img/heroi-roupao-960.jpg" width="1600" height="2000" alt="Roupão branco dobrado e toalha enrolada sobre um banco de madeira, com a luz da tarde atravessando a cortina" decoding="async" fetchpriority="high">
+</picture>
       </figure>
     </div>
     <div class="container">
@@ -129,9 +127,10 @@
     <div class="container split">
       <figure class="split__foto moldura mov mov--esq">
         <picture>
-          <source srcset="assets/img/pratica-elisa-roupao.webp" type="image/webp">
-          <img src="assets/img/pratica-elisa-roupao.jpg" width="880" height="1100" loading="lazy" alt="Elisa Santos de roupão branco, de perfil, com a mão na nuca e frascos de cosméticos em primeiro plano">
-        </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/pratica-elisa-roupao-480.webp 480w, assets/img/pratica-elisa-roupao-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/pratica-elisa-roupao-960.webp 960w" sizes="50vw">
+  <img src="assets/img/pratica-elisa-roupao-960.jpg" width="880" height="1100" alt="Elisa Santos de roupão branco, de perfil, com a mão na nuca e frascos de cosméticos em primeiro plano" decoding="async">
+</picture>
         <figcaption class="split__legenda">Elisa Santos, esteticista</figcaption>
       </figure>
       <div class="split__texto mov mov--dir">
@@ -149,9 +148,10 @@
   <section class="secao tecnicas" id="tecnicas">
     <div class="tecnicas__fundo" aria-hidden="true">
       <picture>
-        <source srcset="assets/img/tecnicas-fundo.webp" type="image/webp">
-        <img src="assets/img/tecnicas-fundo.jpg" width="1600" height="1067" loading="lazy" alt="">
-      </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/tecnicas-fundo-480.webp 480w, assets/img/tecnicas-fundo-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/tecnicas-fundo-960.webp 960w, assets/img/tecnicas-fundo-1600.webp 1600w" sizes="50vw">
+  <img src="assets/img/tecnicas-fundo-960.jpg" width="1600" height="1067" alt="" decoding="async">
+</picture>
     </div>
     <div class="container">
       <div class="cabeca cabeca--centro mov mov--subir">
@@ -229,37 +229,42 @@
       <div class="mosaico">
         <figure class="mosaico__item mosaico__item--grande mov mov--subir">
           <picture>
-            <source srcset="assets/img/espaco-linho-oleo.webp" type="image/webp">
-            <img src="assets/img/espaco-linho-oleo.jpg" width="960" height="1440" loading="lazy" alt="Toalha de linho dobrada, frasco de óleo e tigela de cerâmica com óleo numa mesinha de madeira">
-          </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/espaco-linho-oleo-480.webp 480w, assets/img/espaco-linho-oleo-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/espaco-linho-oleo-960.webp 960w" sizes="50vw">
+  <img src="assets/img/espaco-linho-oleo-960.jpg" width="960" height="1440" alt="Toalha de linho dobrada, frasco de óleo e tigela de cerâmica com óleo numa mesinha de madeira" decoding="async" loading="lazy">
+</picture>
           <figcaption>Linho e óleo</figcaption>
         </figure>
         <figure class="mosaico__item mov mov--subir">
           <picture>
-            <source srcset="assets/img/espaco-oleos.webp" type="image/webp">
-            <img src="assets/img/espaco-oleos.jpg" width="960" height="1200" loading="lazy" alt="Frascos âmbar de óleo e uma tigela de cerâmica sobre uma toalha de linho">
-          </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/espaco-oleos-480.webp 480w, assets/img/espaco-oleos-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/espaco-oleos-960.webp 960w" sizes="50vw">
+  <img src="assets/img/espaco-oleos-960.jpg" width="960" height="1200" alt="Frascos âmbar de óleo e uma tigela de cerâmica sobre uma toalha de linho" decoding="async" loading="lazy">
+</picture>
           <figcaption>Óleos</figcaption>
         </figure>
         <figure class="mosaico__item mov mov--subir">
           <picture>
-            <source srcset="assets/img/espaco-toalhas.webp" type="image/webp">
-            <img src="assets/img/espaco-toalhas.jpg" width="960" height="1200" loading="lazy" alt="Toalhas creme e verdes dobradas numa prateleira de madeira">
-          </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/espaco-toalhas-480.webp 480w, assets/img/espaco-toalhas-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/espaco-toalhas-960.webp 960w" sizes="50vw">
+  <img src="assets/img/espaco-toalhas-960.jpg" width="960" height="1200" alt="Toalhas creme e verdes dobradas numa prateleira de madeira" decoding="async" loading="lazy">
+</picture>
           <figcaption>Toalhas</figcaption>
         </figure>
         <figure class="mosaico__item mov mov--subir">
           <picture>
-            <source srcset="assets/img/espaco-ventosas-vidro.webp" type="image/webp">
-            <img src="assets/img/espaco-ventosas-vidro.jpg" width="960" height="1200" loading="lazy" alt="Copos de ventosa transparentes sobre um pano de linho">
-          </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/espaco-ventosas-vidro-480.webp 480w, assets/img/espaco-ventosas-vidro-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/espaco-ventosas-vidro-960.webp 960w" sizes="50vw">
+  <img src="assets/img/espaco-ventosas-vidro-960.jpg" width="960" height="1200" alt="Copos de ventosa transparentes sobre um pano de linho" decoding="async" loading="lazy">
+</picture>
           <figcaption>Copos de ventosa</figcaption>
         </figure>
         <figure class="mosaico__item mov mov--subir">
           <picture>
-            <source srcset="assets/img/espaco-planta-luz.webp" type="image/webp">
-            <img src="assets/img/espaco-planta-luz.jpg" width="960" height="1200" loading="lazy" alt="Planta num vaso claro ao lado de uma cortina de linho iluminada">
-          </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/espaco-planta-luz-480.webp 480w, assets/img/espaco-planta-luz-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/espaco-planta-luz-960.webp 960w" sizes="50vw">
+  <img src="assets/img/espaco-planta-luz-960.jpg" width="960" height="1200" alt="Planta num vaso claro ao lado de uma cortina de linho iluminada" decoding="async" loading="lazy">
+</picture>
           <figcaption>Luz da janela</figcaption>
         </figure>
       </div>
@@ -270,9 +275,10 @@
     <div class="container split split--invertido">
       <figure class="split__foto moldura mov mov--dir">
         <picture>
-          <source srcset="assets/img/gestacao-almofadas.webp" type="image/webp">
-          <img src="assets/img/gestacao-almofadas.jpg" width="1200" height="1500" loading="lazy" alt="Maca com almofadas de apoio em linho e uma manta verde dobrada">
-        </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/gestacao-almofadas-480.webp 480w, assets/img/gestacao-almofadas-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/gestacao-almofadas-960.webp 960w" sizes="50vw">
+  <img src="assets/img/gestacao-almofadas-960.jpg" width="1200" height="1500" alt="Maca com almofadas de apoio em linho e uma manta verde dobrada" decoding="async" loading="lazy">
+</picture>
       </figure>
       <div class="split__texto mov mov--esq">
         <p class="eyebrow">Na gestação</p>
@@ -289,9 +295,10 @@
     <div class="container split">
       <figure class="split__foto split__foto--retrato moldura mov mov--esq">
         <picture>
-          <source srcset="assets/img/quem-atende-elisa-espelho.webp" type="image/webp">
-          <img src="assets/img/quem-atende-elisa-espelho.jpg" width="1152" height="1440" loading="lazy" alt="Elisa Santos de roupão branco diante do espelho, com a mão no rosto">
-        </picture>
+  <source type="image/webp" media="(max-width: 899px)" srcset="assets/img/quem-atende-elisa-espelho-480.webp 480w, assets/img/quem-atende-elisa-espelho-960.webp 960w" sizes="100vw">
+  <source type="image/webp" srcset="assets/img/quem-atende-elisa-espelho-960.webp 960w" sizes="50vw">
+  <img src="assets/img/quem-atende-elisa-espelho-960.jpg" width="1152" height="1440" alt="Elisa Santos de roupão branco diante do espelho, com a mão no rosto" decoding="async" loading="lazy">
+</picture>
       </figure>
       <div class="split__texto mov mov--dir">
         <p class="eyebrow">Quem atende</p>
